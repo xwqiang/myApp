@@ -1,7 +1,5 @@
 import os
 
-from config import dev, prod, test
-
 
 class Config():
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'hard to guess string'
@@ -26,16 +24,14 @@ class Config():
 class DevelopmentConfig(Config):
     DEBUG = True
     USERNAME = "aaabbb"
-    SETTINGS = dev
 
 
 class TestingConfig(Config):
     TESTING = True
-    settings = test
 
 
 class ProductionConfig(Config):
-    settings = prod
+    pass
 
 
 config = {
