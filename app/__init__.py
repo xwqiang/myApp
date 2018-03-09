@@ -17,7 +17,7 @@ def create_app(config_name):
 
     # 注册蓝本
     from .main import main as main_blueprint
-    app.register_blueprint(main_blueprint)
+    app.register_blueprint(app.main_blueprint)
     # 附加路由和自定义的错误页面
 
     return app

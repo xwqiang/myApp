@@ -6,7 +6,7 @@ from flask_script import Manager, Shell
 
 from app import create_app, db
 
-app = create_app(os.getenv('FLASK_CONFIG') or 'default')
+app = create_app(os.getenv('ENV_NAME') or 'default')
 
 manager = Manager(app)
 
